@@ -7,9 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      extend: {},
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        ivory: "#FFFFF0",
       },
     },
   },
