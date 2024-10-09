@@ -13,9 +13,9 @@ export default function LangToggle() {
     <div className="flex items-center">
       <button
         onClick={toggleLanguage}
-        className="px-4 py-2 text-xl font-bold lowercase transition-colors duration-300 hover:text-yellow-500"
+        className="px-4 py-2 text-xl font-bold transition-colors duration-300 hover:text-yellow-500"
       >
-        {i18n.language === "en" ? "Français" : "English"}
+        {i18n.language === "en" ? "français" : "english"}
       </button>
     </div>
   );

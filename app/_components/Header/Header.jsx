@@ -51,7 +51,7 @@ export default function Header() {
       <div className="container flex items-center justify-between px-4 mx-auto sm:px-6 lg:px-8">
         <LangToggle isScrolled={isScrolled} />
 
-        <nav className="flex space-x-8 text-xl font-bold lowercase">
+        <nav className="flex space-x-8 text-xl font-bold">
           {["work", "about", "resume", "contact"].map((sectionId) => (
             <button
               key={sectionId}

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import i18n from "../i18n";
-import Loading from "../loading";
+import Loading from "../loading"; // Ensure your loading component is properly imported
 
 export default function I18nInitializer({ children }) {
   const [initialized, setInitialized] = useState(false);
@@ -13,10 +13,10 @@ export default function I18nInitializer({ children }) {
       setInitialized(true);
     };
 
-    if (i18n.isInitialized) {
-      handleInitialization();
-    } else {
+    if (!i18n.isInitialized) {
       i18n.on("initialized", handleInitialization);
+    } else {
+      handleInitialization();
     }
 
     // Cleanup listener on unmount
@@ -25,6 +25,7 @@ export default function I18nInitializer({ children }) {
     };
   }, []);
 
+  // Show loading until initialized
   if (!initialized) return <Loading />;
 
   return children;
