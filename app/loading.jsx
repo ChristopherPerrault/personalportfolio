@@ -10,9 +10,13 @@ export default function Loading() {
             key={index}
             className="text-3xl font-bold text-yellow-600 lowercase transition-opacity duration-300"
             style={{
-              animationDelay: `${(index + 1) * 300}ms`, // Adjust delay for each word
+              // delay per word
+              animationDelay: `${(index + 1) * 500}ms`,
+              opacity: 0,
               animationName: "fadeIn",
               animationFillMode: "forwards",
+              // how long each word stays on before next one appears
+              animationDuration: "0.3s",
             }}
           >
             {word}

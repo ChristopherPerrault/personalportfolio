@@ -1,32 +1,22 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import i18n from "../i18n";
 import Loading from "../loading"; // Ensure your loading component is properly imported
 
 export default function I18nInitializer({ children }) {
-  const [initialized, setInitialized] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const handleInitialization = () => {
-      i18n.changeLanguage("en");
-      setInitialized(true);
-    };
+    // Simulate loading time (e.g., 4 seconds for demonstration)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000); // Adjust the duration as needed
 
-    if (!i18n.isInitialized) {
-      i18n.on("initialized", handleInitialization);
-    } else {
-      handleInitialization();
-    }
-
-    // Cleanup listener on unmount
-    return () => {
-      i18n.off("initialized", handleInitialization);
-    };
+    return () => clearTimeout(timer);
   }, []);
 
-  // Show loading until initialized
-  if (!initialized) return <Loading />;
+  // Show loading until timer completes
+  if (loading) return <Loading />;
 
   return children;
 }
