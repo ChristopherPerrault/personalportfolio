@@ -1,22 +1,24 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Loading from "../loading"; // Ensure your loading component is properly imported
+import Loading from "../loading";
 
 export default function I18nInitializer({ children }) {
   const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // Simulate loading time (e.g., 4 seconds for demonstration)
     const timer = setTimeout(() => {
-      setLoading(false);
-    }, 4000); // Adjust the duration as needed
+      setFadeOut(true); // Start fade-out when loading is complete
+      setTimeout(() => {
+        setLoading(false); // After fade-out, hide loading
+      }, 300); // Duration of the fade-out effect
+    }, 3000); // Adjust the loading time as needed
 
     return () => clearTimeout(timer);
   }, []);
 
-  // Show loading until timer completes
-  if (loading) return <Loading />;
+  if (loading) return <Loading fadeOut={fadeOut} />;
 
   return children;
 }

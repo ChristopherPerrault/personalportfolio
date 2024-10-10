@@ -1,22 +1,24 @@
 "use client";
 
-export default function Loading() {
+export default function Loading({ fadeOut }) {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-ivory">
+    <div
+      className={`flex items-center justify-center min-h-screen bg-ivory ${
+        fadeOut ? "fade-out" : ""
+      }`}
+    >
       <div className="space-y-2 text-center">
-        <p className="text-3xl font-bold text-yellow-600 lowercase">Keep</p>
-        {["Loading", "Loading", "Loading", "Loading"].map((word, index) => (
+        <p className="text-3xl font-bold text-yellow-600 ">keep</p>
+        {["loading,", "loading,", "loading,", "loading"].map((word, index) => (
           <p
             key={index}
-            className="text-3xl font-bold text-yellow-600 lowercase transition-opacity duration-300"
+            className="text-3xl font-bold text-yellow-600 transition-opacity duration-300"
             style={{
-              // delay per word
-              animationDelay: `${(index + 1) * 500}ms`,
+              animationDelay: `${(index + 1) * 500}ms`, // Adjust delay for each word
               opacity: 0,
               animationName: "fadeIn",
               animationFillMode: "forwards",
-              // how long each word stays on before next one appears
-              animationDuration: "0.3s",
+              animationDuration: "0.3s", // Duration of each word appearance
             }}
           >
             {word}
@@ -33,6 +35,17 @@ export default function Loading() {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+        @keyframes fadeOut {
+          from {
+            opacity: 1;
+          }
+          to {
+            opacity: 0;
+          }
+        }
+        .fade-out {
+          animation: fadeOut 0.5s forwards;
         }
       `}</style>
     </div>
