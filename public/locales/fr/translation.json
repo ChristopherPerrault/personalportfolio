@@ -1,6 +1,17 @@
 {
-  "work": "travail",
-  "about": "à propos",
-  "resume": "cv",
-  "contact": "contact"
+  "nav": {
+    "work": "travail",
+    "about": "à propos",
+    "resume": "cv",
+    "contact": "contact"
+  },
+
+  "contact": {
+    "name": "Nom",
+    "email": "E-mail",
+    "message": "Message",
+    "submit": "Envoyer",
+    "success": "Message envoyé avec succès!",
+    "error": "Une erreur s'est produite. Veuillez réessayer."
+  }
 }

@@ -52,6 +52,7 @@ export default function Header() {
         <LangToggle isScrolled={isScrolled} />
 
         <nav className="flex space-x-8 text-xl font-bold">
+          {/* {["nav.work", "nav.about", "nav.resume", "nav.contact"].map( */}
           {["work", "about", "resume", "contact"].map((sectionId) => (
             <button
               key={sectionId}

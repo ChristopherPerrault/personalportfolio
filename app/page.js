@@ -1,8 +1,10 @@
+import ContactForm from "./_components/ContactForm/ContactForm";
+
 export default function Home() {
   return (
     <>
       {/* Portfolio Section */}
-      <section id="work" className="min-h-screen text-yellow-400 bg-ivory">
+      {/* <section id="work" className="min-h-screen text-yellow-400 bg-ivory">
         <div className="container px-4 py-20 mx-auto sm:px-6 lg:px-8">
           <h1 className="text-6xl font-bold tracking-tight text-black">
             Portfolio
@@ -11,10 +13,10 @@ export default function Home() {
             This is where your portfolio content will go.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* About Section */}
-      <section id="about" className="min-h-screen text-yellow-400 bg-ivory">
+      {/* <section id="about" className="min-h-screen text-yellow-400 bg-ivory">
         <div className="container px-4 py-20 mx-auto sm:px-6 lg:px-8">
           <h1 className="text-6xl font-bold tracking-tight text-black">
             About
@@ -23,10 +25,10 @@ export default function Home() {
             This is where your about content will go.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Resume Section */}
-      <section id="resume" className="min-h-screen text-yellow-400 bg-ivory">
+      {/* <section id="resume" className="min-h-screen text-yellow-400 bg-ivory">
         <div className="container px-4 py-20 mx-auto sm:px-6 lg:px-8">
           <h1 className="text-6xl font-bold tracking-tight text-black">
             Resume
@@ -35,9 +37,10 @@ export default function Home() {
             This is where your resume content will go.
           </p>
         </div>
-      </section>
+      </section> */}
 
-      {/* Contact Section */}
+      <ContactForm />
+      {/* Contact Section
       <section id="contact" className="min-h-screen text-yellow-400 bg-ivory">
         <div className="container px-4 py-20 mx-auto sm:px-6 lg:px-8">
           <h1 className="text-6xl font-bold tracking-tight text-black">
@@ -47,7 +50,7 @@ export default function Home() {
             This is where your contact content will go.
           </p>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

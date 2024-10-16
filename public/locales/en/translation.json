@@ -1,6 +1,16 @@
 {
-  "work": "work",
-  "about": "about",
-  "resume": "resume",
-  "contact": "contact"
+  "nav": {
+    "work": "work",
+    "about": "about",
+    "resume": "resume",
+    "contact": "contact"
+  },
+  "contact": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Please try again."
+  }
 }
