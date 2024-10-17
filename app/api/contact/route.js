@@ -13,7 +13,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Named export for POST method
 export async function POST(req) {
   try {
     const body = await req.json();
@@ -22,13 +21,13 @@ export async function POST(req) {
     const mailOptions = {
       from: user,
       to: recipient,
-      subject: `New Contact Form Submission`,
+      subject: `Via Portfolio`,
       html: `
-        <h2>Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong> ${message}</p>
-      `,
+  <h3>Portfolio Contact Form Submission</h3>
+  <p><strong style="color: #FF8C00;">Name:</strong> ${name}</p>
+  <p><strong style="color: #FF8C00;">Email:</strong> ${email}</p>
+  <p><strong style="color: #FF8C00;">Message:</strong> ${message}</p>
+`,
     };
 
     await transporter.sendMail(mailOptions);

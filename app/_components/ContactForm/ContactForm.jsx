@@ -40,66 +40,43 @@ export default function ContactForm() {
     <div className="flex items-center justify-center min-h-screen p-4 bg-ivory">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-lg p-8 space-y-4 bg-white rounded-lg shadow-md"
+        className="w-full max-w-lg space-y-4 bg-transparent"
       >
-        <div>
-          <label
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-700"
-          >
-            {t("contact.name")}
-          </label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className="w-full p-2 mt-1 border rounded-lg focus:ring-2 focus:ring-yellow-600"
-          />
-        </div>
-
-        <div>
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700"
-          >
-            {t("contact.email")}
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="w-full p-2 mt-1 border rounded-lg focus:ring-2 focus:ring-yellow-600"
-          />
-        </div>
-
-        <div>
-          <label
-            htmlFor="message"
-            className="block text-sm font-medium text-gray-700"
-          >
-            {t("contact.message")}
-          </label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            rows="4"
-            className="w-full p-2 mt-1 border rounded-lg focus:ring-2 focus:ring-yellow-600"
-          ></textarea>
-        </div>
-
+        {["name", "email", "message"].map((field) => (
+          <div key={field}>
+            <label htmlFor={field} className="sr-only">
+              {t(`contact.${field}`)}
+            </label>
+            <input
+              type={field === "message" ? "textarea" : field}
+              name={field}
+              value={formData[field]}
+              onChange={handleChange}
+              required
+              placeholder={t(`contact.${field}`)}
+              className={`w-full p-2 text-lg border-b border-black bg-transparent outline-none focus:ring-0 focus:border-b-0 placeholder-black
+              ${field === "message" ? "resize-none" : ""}`}
+              style={{
+                borderBottomWidth: 2,
+                borderColor: "black",
+              }}
+            />
+            <div className="relative border-black focus:border-yellow-600">
+              <span
+                className={`absolute left-0 right-0 bottom-0 h-0.5 bg-black transition-all`}
+              ></span>
+              <span
+                className={`absolute left-0 right-0 bottom-0 h-0.5 bg-yellow-600 transition-all translate-y-0.5`}
+              ></span>
+            </div>
+          </div>
+        ))}
         <button
           type="submit"
-          className="w-full py-2 font-semibold text-white transition-all bg-yellow-600 rounded-lg hover:bg-yellow-700"
+          className="w-full py-2 font-semibold text-white bg-yellow-600 hover:bg-yellow-700"
         >
           {t("contact.submit")}
         </button>
-
         {status === "success" && (
           <p className="mt-4 text-center text-green-600">
             {t("contact.success")}
