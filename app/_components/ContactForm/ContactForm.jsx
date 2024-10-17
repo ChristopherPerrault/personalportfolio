@@ -24,13 +24,15 @@ export default function ContactForm() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const fieldErrors = {
-    name: formData.name ? validateName(formData.name) : "Name is required.",
+    name: formData.name
+      ? validateName(formData.name, t)
+      : t("contact.validation.name"),
     email: formData.email
-      ? validateEmail(formData.email)
-      : "Email is required.",
+      ? validateEmail(formData.email, t)
+      : t("contact.validation.email"),
     message: formData.message
-      ? validateMessage(formData.message, MAX_MESSAGE_LENGTH)
-      : "Message is required.",
+      ? validateMessage(formData.message, t, MAX_MESSAGE_LENGTH)
+      : t("contact.validation.message"),
   };
 
   const isFieldValid = (field) => !fieldErrors[field];
@@ -98,51 +100,46 @@ export default function ContactForm() {
           </div>
         )}
 
-        {["name", "email", "message"].map((field) => {
-          return (
-            <div key={field} className="relative flex items-center pb-1">
-              <input
-                type={field === "message" ? "textarea" : field}
-                name={field}
-                value={formData[field]}
-                onChange={handleChange}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                required
-                maxLength={field === "message" ? MAX_MESSAGE_LENGTH : undefined}
-                placeholder=" "
-                className={`w-full p-2 text-lg bg-transparent border-b-2 border-black focus:outline-none focus:ring-0 placeholder-transparent 
-                  transition-all duration-200 ${
-                    formData[field] ? "active" : ""
-                  }`}
-              />
-              <label
-                htmlFor={field}
-                className={`absolute left-2 text-lg font-bold text-black lowercase transition-transform duration-200
-                  transform ${
-                    formData[field] ? "translate-y-[-1.5rem] scale-90" : ""
-                  }`}
-              >
-                {t(`contact.${field}`)}
-              </label>
-              <div className="absolute right-0">
-                {touchedFields[field] &&
-                  (isFieldValid(field) ? (
-                    <FaCheck className="text-green-500" />
-                  ) : (
-                    <FaTimes className="text-red-500" />
-                  ))}
-              </div>
-              <div className="absolute bottom-0 w-full transition-all">
-                <span className="block w-full h-[1.5px] bg-black"></span>
-                <span
-                  className={`block w-full h-[3px] bg-yellow-500 -mt-[1px] transition-opacity 
-                  ${formData[field] ? "opacity-100" : "opacity-0"}`}
-                ></span>
-              </div>
+        {["name", "email", "message"].map((field) => (
+          <div key={field} className="relative flex items-center pb-1">
+            <input
+              type={field === "message" ? "textarea" : field}
+              name={field}
+              value={formData[field]}
+              onChange={handleChange}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              required
+              maxLength={field === "message" ? MAX_MESSAGE_LENGTH : undefined}
+              placeholder=" "
+              className={`w-full p-2 text-lg bg-transparent border-b-2 border-black focus:outline-none focus:ring-0 placeholder-transparent 
+        transition-all duration-200 ${formData[field] ? "active" : ""}`}
+            />
+            <label
+              htmlFor={field}
+              className={`absolute left-2 text-lg font-bold text-black lowercase transition-transform duration-200
+        transform ${formData[field] ? "translate-y-[-1.5rem] scale-90" : ""}`}
+            >
+              {t(`contact.${field}`)}{" "}
+              {/* This should display the translated label */}
+            </label>
+            <div className="absolute right-0">
+              {touchedFields[field] &&
+                (isFieldValid(field) ? (
+                  <FaCheck className="text-green-500" />
+                ) : (
+                  <FaTimes className="text-red-500" />
+                ))}
             </div>
-          );
-        })}
+            <div className="absolute bottom-0 w-full transition-all">
+              <span className="block w-full h-[1.5px] bg-black"></span>
+              <span
+                className={`block w-full h-[3px] bg-yellow-500 -mt-[1px] transition-opacity 
+        ${formData[field] ? "opacity-100" : "opacity-0"}`}
+              ></span>
+            </div>
+          </div>
+        ))}
 
         <button
           type="submit"
@@ -155,7 +152,7 @@ export default function ContactForm() {
           }`}
         >
           <FiSend className="mr-2" />
-          {t("contact.submit")}
+          {t("contact.submit")} {/* Update to match JSON keys */}
         </button>
 
         <div className="flex items-center justify-center mt-4 text-center">

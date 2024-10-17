@@ -52,7 +52,6 @@ export default function Header() {
         <LangToggle isScrolled={isScrolled} />
 
         <nav className="flex space-x-8 text-xl font-bold">
-          {/* {["nav.work", "nav.about", "nav.resume", "nav.contact"].map( */}
           {["work", "about", "resume", "contact"].map((sectionId) => (
             <button
               key={sectionId}
@@ -61,7 +60,8 @@ export default function Header() {
                 activeSection === sectionId ? "font-bold text-yellow-600" : ""
               }`}
             >
-              {t(sectionId)}
+              {t(`nav.${sectionId}`)}{" "}
+              {/* Updated to match the JSON structure */}
               <span
                 className={`absolute left-0 right-0 bottom-0 h-1 transition-all ${
                   activeSection === sectionId ? "bg-yellow-600" : "bg-black"

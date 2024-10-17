@@ -5,13 +5,23 @@
     "resume": "cv",
     "contact": "contact"
   },
-
   "contact": {
-    "name": "Nom",
-    "email": "E-mail",
-    "message": "Message",
+    "validation": {
+      "name": "Le nom est requis.",
+      "email": "L'email est requis.",
+      "message": "Le message est requis.",
+      "invalidEmail": "Format d'email invalide.",
+      "messageTooShort": "Le message est trop court.",
+      "messageTooLong": "Le message est trop long."
+    },
+    "success": "Votre message a été envoyé !",
     "submit": "Envoyer",
-    "success": "Message envoyé avec succès!",
-    "error": "Une erreur s'est produite. Veuillez réessayer."
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message"
+  },
+  "error": {
+    "rateLimit": "Vous êtes limité par le taux. Veuillez réessayer plus tard.",
+    "submissionError": "Il y a eu une erreur lors de l'envoi du formulaire."
   }
 }

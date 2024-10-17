@@ -6,11 +6,22 @@
     "contact": "contact"
   },
   "contact": {
+    "validation": {
+      "name": "Name is required.",
+      "email": "Email is required.",
+      "message": "Message is required.",
+      "invalidEmail": "Invalid email address format.",
+      "messageTooShort": "Message is too short.",
+      "messageTooLong": "Message is too long."
+    },
+    "success": "Your message has been sent!",
+    "submit": "Send",
     "name": "Name",
     "email": "Email",
-    "message": "Message",
-    "submit": "Send",
-    "success": "Message sent successfully!",
-    "error": "Something went wrong. Please try again."
+    "message": "Message"
+  },
+  "error": {
+    "rateLimit": "You are being rate-limited. Please try again later.",
+    "submissionError": "There was an error submitting the form."
   }
 }
