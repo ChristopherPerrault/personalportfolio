@@ -1,6 +1,11 @@
+"use client";
+import { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import SeeMoreButton from "./SeeMoreButton";
 
 export default function ProjectsSection() {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+
   const projects = [
     {
       title: "Dr.Charge",
@@ -23,7 +28,7 @@ export default function ProjectsSection() {
       techsUsed: ["React", "CSS Modules", "Node.js"],
     },
     {
-      title: "Project 3",
+      title: "Project 2",
       descriptionKey: "project.description2",
       images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
       github: "https://github.com/project2",
@@ -31,7 +36,7 @@ export default function ProjectsSection() {
       techsUsed: ["React", "CSS Modules", "Node.js"],
     },
     {
-      title: "Project 4",
+      title: "Project 2",
       descriptionKey: "project.description2",
       images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
       github: "https://github.com/project2",
@@ -39,31 +44,24 @@ export default function ProjectsSection() {
       techsUsed: ["React", "CSS Modules", "Node.js"],
     },
     {
-      title: "Project 5",
+      title: "Project 2",
       descriptionKey: "project.description2",
       images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
       github: "https://github.com/project2",
       liveUrl: "https://project2.com",
       techsUsed: ["React", "CSS Modules", "Node.js"],
     },
-    {
-      title: "Project 6",
-      descriptionKey: "project.description2",
-      images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
-      github: "https://github.com/project2",
-      liveUrl: "https://project2.com",
-      techsUsed: ["React", "CSS Modules", "Node.js"],
-    },
+    // Add more projects here...
   ];
+
+  const visibleProjects = showAllProjects ? projects : projects.slice(0, 3);
 
   return (
     <section id="projects" className="py-16 bg-ivory">
       <div className="container px-4 mx-auto">
         <h2 className="mb-8 text-4xl font-bold text-center">Projects</h2>
         <div className="grid max-w-screen-md grid-cols-1 gap-8 mx-auto sm:px-6 lg:px-10">
-          {" "}
-          {/* Adjusting padding and width */}
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <ProjectCard
               key={index}
               title={project.title}
@@ -75,6 +73,11 @@ export default function ProjectsSection() {
             />
           ))}
         </div>
+
+        {/* See More Button */}
+        {!showAllProjects && projects.length > 3 && (
+          <SeeMoreButton onClick={() => setShowAllProjects(true)} />
+        )}
       </div>
     </section>
   );
