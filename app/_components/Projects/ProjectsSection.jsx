@@ -74,7 +74,6 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        {/* See More Button */}
         {!showAllProjects && projects.length > 3 && (
           <SeeMoreButton onClick={() => setShowAllProjects(true)} />
         )}

@@ -12,7 +12,11 @@
     "github": "Github",
     "seeMoreBtn": "See More Projects"
   },
-
+  "resume": {
+    "title": "Resume",
+    "viewBtn": "View Resume",
+    "downloadBtn": "Download Resume"
+  },
   "contact": {
     "validation": {
       "name": "Name is required.",

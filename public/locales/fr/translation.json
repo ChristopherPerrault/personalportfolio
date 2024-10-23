@@ -12,6 +12,11 @@
     "github": "Github",
     "seeMoreBtn": "Voir Plus de Projets"
   },
+  "resume": {
+    "title": "CV",
+    "viewBtn": "Voir le CV",
+    "downloadBtn": "Télécharger le CV"
+  },
   "contact": {
     "validation": {
       "name": "Le nom est requis.",
