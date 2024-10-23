@@ -1,56 +1,30 @@
-import ContactForm from "./_components/ContactForm/ContactForm";
+import ProjectsSection from "./_components/Projects/ProjectsSection";
+import AboutSection from "./_components/About/AboutSection";
+import ResumeSection from "./_components/Resume/ResumeSection";
+import ContactSection from "./_components/Contact/ContactSection";
 
 export default function Home() {
   return (
     <>
-      {/* Portfolio Section */}
-      {/* <section id="work" className="min-h-screen text-yellow-400 bg-ivory">
-        <div className="container px-4 py-20 mx-auto sm:px-6 lg:px-8">
-          <h1 className="text-6xl font-bold tracking-tight text-black">
-            Portfolio
-          </h1>
-          <p className="mt-4 text-lg text-black">
-            This is where your portfolio content will go.
-          </p>
-        </div>
-      </section> */}
+      {/* Projects Section */}
+      <section id="projects" className="min-h-screen bg-ivory">
+        <ProjectsSection />
+      </section>
 
       {/* About Section */}
-      {/* <section id="about" className="min-h-screen text-yellow-400 bg-ivory">
-        <div className="container px-4 py-20 mx-auto sm:px-6 lg:px-8">
-          <h1 className="text-6xl font-bold tracking-tight text-black">
-            About
-          </h1>
-          <p className="mt-4 text-lg text-black">
-            This is where your about content will go.
-          </p>
-        </div>
-      </section> */}
+      <section id="about" className="min-h-screen bg-ivory">
+        <AboutSection />
+      </section>
 
       {/* Resume Section */}
-      {/* <section id="resume" className="min-h-screen text-yellow-400 bg-ivory">
-        <div className="container px-4 py-20 mx-auto sm:px-6 lg:px-8">
-          <h1 className="text-6xl font-bold tracking-tight text-black">
-            Resume
-          </h1>
-          <p className="mt-4 text-lg text-black">
-            This is where your resume content will go.
-          </p>
-        </div>
-      </section> */}
+      <section id="resume" className="min-h-screen bg-ivory">
+        <ResumeSection />
+      </section>
 
-      <ContactForm />
-      {/* Contact Section
-      <section id="contact" className="min-h-screen text-yellow-400 bg-ivory">
-        <div className="container px-4 py-20 mx-auto sm:px-6 lg:px-8">
-          <h1 className="text-6xl font-bold tracking-tight text-black">
-            Contact
-          </h1>
-          <p className="mt-4 text-lg text-black">
-            This is where your contact content will go.
-          </p>
-        </div>
-      </section> */}
+      {/* Contact Section */}
+      <section id="contact" className="min-h-screen bg-ivory">
+        <ContactSection />
+      </section>
     </>
   );
 }
