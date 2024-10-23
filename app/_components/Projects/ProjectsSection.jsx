@@ -22,6 +22,38 @@ export default function ProjectsSection() {
       liveUrl: "https://project2.com",
       techsUsed: ["React", "CSS Modules", "Node.js"],
     },
+    {
+      title: "Project 3",
+      descriptionKey: "project.description2",
+      images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
+      github: "https://github.com/project2",
+      liveUrl: "https://project2.com",
+      techsUsed: ["React", "CSS Modules", "Node.js"],
+    },
+    {
+      title: "Project 4",
+      descriptionKey: "project.description2",
+      images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
+      github: "https://github.com/project2",
+      liveUrl: "https://project2.com",
+      techsUsed: ["React", "CSS Modules", "Node.js"],
+    },
+    {
+      title: "Project 5",
+      descriptionKey: "project.description2",
+      images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
+      github: "https://github.com/project2",
+      liveUrl: "https://project2.com",
+      techsUsed: ["React", "CSS Modules", "Node.js"],
+    },
+    {
+      title: "Project 6",
+      descriptionKey: "project.description2",
+      images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
+      github: "https://github.com/project2",
+      liveUrl: "https://project2.com",
+      techsUsed: ["React", "CSS Modules", "Node.js"],
+    },
   ];
 
   return (
