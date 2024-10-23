@@ -60,7 +60,9 @@ export default function ProjectsSection() {
     <section id="projects" className="py-16 bg-ivory">
       <div className="container px-4 mx-auto">
         <h2 className="mb-8 text-4xl font-bold text-center">Projects</h2>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid max-w-screen-md grid-cols-1 gap-8 mx-auto sm:px-6 lg:px-10">
+          {" "}
+          {/* Adjusting padding and width */}
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
