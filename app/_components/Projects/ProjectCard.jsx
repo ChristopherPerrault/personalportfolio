@@ -1,43 +1,24 @@
 import ProjectDescription from "./ProjectDescription";
+import ProjectImage from "./ProjectImage";
+import LinkButton from "./LinkButton";
 
 export default function ProjectCard({
   title,
-  description,
-  image,
-  github,
-  liveUrl,
+  descriptionKey,
   techsUsed,
+  images,
+  liveUrl,
+  github,
 }) {
   return (
-    <div className="p-4 border border-gray-200 rounded-lg shadow-md">
-      <img
-        src={image}
-        alt={title}
-        className="object-cover w-full h-48 rounded-lg"
-      />
-      <h3 className="mt-4 text-xl font-semibold">{title}</h3>
-      <ProjectDescription text={description} techsUsed={techsUsed} />
-      <div className="flex justify-between mt-4">
-        {github && (
-          <a
-            href={github}
-            className="text-blue-600 hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-        )}
-        {liveUrl && (
-          <a
-            href={liveUrl}
-            className="text-blue-600 hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live Site
-          </a>
-        )}
+    <div className="p-6 transition-shadow duration-300 ease-in-out bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg">
+      <ProjectImage images={images} />
+      <h3 className="mt-6 text-2xl font-bold text-darkGray">{title}</h3>
+      <ProjectDescription textKey={descriptionKey} techsUsed={techsUsed} />
+
+      <div className="flex justify-between mt-6 space-x-4">
+        {liveUrl && <LinkButton url={liveUrl} labelKey="project.visitSite" />}
+        {github && <LinkButton url={github} labelKey="project.github" />}
       </div>
     </div>
   );

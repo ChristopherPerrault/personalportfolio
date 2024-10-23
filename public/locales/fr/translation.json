@@ -1,9 +1,15 @@
 {
   "nav": {
-    "work": "travail",
+    "projects": "projets",
     "about": "à propos",
     "resume": "cv",
     "contact": "contact"
+  },
+  "project": {
+    "description1": "Page de destination commerciale, conçue et développée de A à Z pour le client. Moderne, épurée et très rapide; développée avec des bases solides pour faciliter la croissance. Inclut une validation personnalisée du formulaire de contact et des traductions instantanées.",
+    "description2": "...",
+    "visitSite": "Visiter le site",
+    "github": "Github"
   },
   "contact": {
     "validation": {

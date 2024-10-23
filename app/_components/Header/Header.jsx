@@ -12,7 +12,7 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      const sections = ["work", "about", "resume", "contact"];
+      const sections = ["projects", "about", "resume", "contact"];
       const scrollPosition = window.scrollY;
 
       sections.forEach((sectionId) => {
@@ -52,7 +52,7 @@ export default function Header() {
         <LangToggle isScrolled={isScrolled} />
 
         <nav className="flex space-x-8 text-xl font-bold">
-          {["work", "about", "resume", "contact"].map((sectionId) => (
+          {["projects", "about", "resume", "contact"].map((sectionId) => (
             <button
               key={sectionId}
               onClick={() => scrollToSection(sectionId)}

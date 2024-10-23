@@ -1,10 +1,17 @@
 {
   "nav": {
-    "work": "work",
+    "projects": "projects",
     "about": "about",
     "resume": "resume",
     "contact": "contact"
   },
+  "project": {
+    "description1": "Commercial landing page, designed & built from scratch for the client. Modern, clear & very fast; developed with the foundations set for ease of growth. Features custom contact form validation and instant language translations.",
+    "description2": "...",
+    "visitSite": "Visit Site",
+    "github": "Github"
+  },
+
   "contact": {
     "validation": {
       "name": "Name is required.",

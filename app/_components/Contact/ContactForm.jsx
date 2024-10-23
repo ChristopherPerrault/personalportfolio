@@ -144,15 +144,19 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isButtonDisabled}
-          className={`flex items-center justify-center px-8 py-3 mx-auto mt-4 text-lg font-semibold text-black transition-all border-2 border-black rounded-full 
-          ${
-            isButtonDisabled
-              ? "bg-gray-500 cursor-not-allowed opacity-60"
-              : "hover:bg-yellow-500 hover:text-black"
-          }`}
+          className={`flex items-center justify-center p-0.5 rounded-full bg-black mx-auto mt-4`}
         >
-          <FiSend className="mr-2" />
-          {t("contact.submit")} {/* Update to match JSON keys */}
+          <div
+            className={`flex items-center justify-center w-full px-8 py-3 text-lg font-semibold text-black transition-all rounded-full bg-ivory
+    ${
+      isButtonDisabled
+        ? "bg-gray-500 cursor-not-allowed opacity-60"
+        : "hover:bg-yellow-500 hover:text-black"
+    }`}
+          >
+            <FiSend className="mr-2" />
+            {t("contact.submit")}
+          </div>
         </button>
 
         <div className="flex items-center justify-center mt-4 text-center">

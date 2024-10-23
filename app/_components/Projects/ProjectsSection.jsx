@@ -1,25 +1,23 @@
 import ProjectCard from "./ProjectCard";
 
-export default function PortfolioSection() {
+export default function ProjectsSection() {
   const projects = [
     {
       title: "Dr.Charge",
-      description:
-        "Commercial landing page, designed & built from scratch for the client. Modern, clear & very fast; developed with the foundations set for ease of growth.",
-      image: "/path-to-image-1.jpg",
-      github: "https://github.com/project1",
+      descriptionKey: "project.description1",
+      images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
+      github: "https://github.com/ChristopherPerrault/drcsite",
       liveUrl: "https://drcharge.ca",
       techsUsed: ["Next.js", "Tailwind CSS", "Nodemailer"],
     },
     {
       title: "Project 2",
-      description: "This is a description for Project 2.",
-      image: "/path-to-image-2.jpg",
+      descriptionKey: "project.description2",
+      images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
       github: "https://github.com/project2",
       liveUrl: "https://project2.com",
-      techsUsed: ["React", "CSS Modules", "Node.js"], // Add techsUsed here
+      techsUsed: ["React", "CSS Modules", "Node.js"],
     },
-    // Add more projects as needed
   ];
 
   return (
@@ -31,8 +29,8 @@ export default function PortfolioSection() {
             <ProjectCard
               key={index}
               title={project.title}
-              image={project.image}
-              description={project.description}
+              images={project.images}
+              descriptionKey={project.descriptionKey}
               techsUsed={project.techsUsed}
               liveUrl={project.liveUrl}
               github={project.github}
