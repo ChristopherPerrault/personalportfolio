@@ -5,7 +5,11 @@ export default function ProjectsSection() {
     {
       title: "Dr.Charge",
       descriptionKey: "project.description1",
-      images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
+      images: [
+        "/images/projects/drc1.png",
+        "/images/projects/drc2.png",
+        "/images/projects/drc3.png",
+      ],
       github: "https://github.com/ChristopherPerrault/drcsite",
       liveUrl: "https://drcharge.ca",
       techsUsed: ["Next.js", "Tailwind CSS", "Nodemailer"],
