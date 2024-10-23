@@ -61,7 +61,6 @@ export default function Header() {
               }`}
             >
               {t(`nav.${sectionId}`)}{" "}
-              {/* Updated to match the JSON structure */}
               <span
                 className={`absolute left-0 right-0 bottom-0 h-1 transition-all ${
                   activeSection === sectionId ? "bg-yellow-600" : "bg-black"

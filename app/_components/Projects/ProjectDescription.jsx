@@ -6,11 +6,14 @@ export default function ProjectDescription({ textKey, techsUsed }) {
 
   return (
     <>
-      <p className="mt-2 text-gray-600">{t(textKey)}</p>
+      <p className="mt-2 text-xl text-gray-700">{t(textKey)}</p>
       {techsUsed && (
-        <ul className="flex flex-wrap gap-2 mt-2 text-gray-600">
+        <ul className="flex flex-wrap gap-2 mt-4">
           {techsUsed.map((tech, index) => (
-            <li key={index} className="px-2 py-1 text-sm bg-gray-200 rounded">
+            <li
+              key={index}
+              className="px-2 py-1 text-sm font-semibold text-black transition-colors duration-200 ease-in-out bg-yellow-500 border-2 border-black rounded"
+            >
               {tech}
             </li>
           ))}
