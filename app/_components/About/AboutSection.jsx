@@ -1,7 +1,11 @@
+import AboutIntro from "./AboutIntro";
+import TechShowcase from "./TechShowcase";
+
 export default function AboutSection() {
   return (
     <>
-      <div className="">AboutSection</div>
+      <AboutIntro />
+      <TechShowcase />
     </>
   );
 }

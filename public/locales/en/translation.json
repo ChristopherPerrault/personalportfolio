@@ -12,6 +12,16 @@
     "github": "Github",
     "seeMoreBtn": "See More Projects"
   },
+  "about": {
+    "description": "I'm Chris Perrault, a full stack developer from Montréal with a unique path to tech. I spent over 15 years as a professional cook before discovering my love for programming, which led me to graduate with honors from John Abbott College's Full Stack program. Today, I thrive in freelance work and stay active in programming communities, both online and at local events. I'm all about building, learning, and sharing my skills with others.",
+    "toolsHeader": "Familiar tools",
+    "photoAlt": "Portrait of Chris"
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "show": "Show Tech Stack",
+    "hide": "Hide Tech Stack"
+  },
   "resume": {
     "title": "Resume",
     "viewBtn": "View Resume",
