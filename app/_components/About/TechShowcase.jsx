@@ -50,7 +50,7 @@ const techCategories = {
     { name: "HTML5", icon: FaHtml5 },
     { name: "CSS3", icon: FaCss3Alt },
     { name: "Tailwind CSS", icon: SiTailwindcss },
-    { name: "daisyUI", icon: SiDaisyui },
+    { name: "DaisyUI", icon: SiDaisyui },
   ],
   backend: [
     { name: "Node.js", icon: FaNodeJs },
@@ -99,7 +99,9 @@ export default function TechShowcase() {
             <button onClick={() => setIsOpen(!isOpen)} className={buttonStyles}>
               {isOpen ? t("techStack.hide") : t("techStack.show")}
               <AiOutlineDown
-                className={`ml-2 transform ${isOpen ? "rotate-180" : ""}`}
+                className={`ml-2 transition-transform duration-200 transform ${
+                  isOpen ? "rotate-180" : "rotate-0"
+                }`}
               />
             </button>
           </div>
@@ -109,8 +111,8 @@ export default function TechShowcase() {
           <div className="mt-8 space-y-6">
             {Object.entries(techCategories).map(([category, techs]) => (
               <div key={category} className="flex items-center justify-center">
-                <h3 className="mr-6 text-xl font-semibold text-gray-700 capitalize">
-                  {t(`techStack.categories.${category}`)}
+                <h3 className="mr-6 text-lg font-semibold text-gray-700 capitalize">
+                  {t(`techStack.categories.${category}`)}:
                 </h3>
 
                 <div className="flex flex-wrap justify-center gap-4">
