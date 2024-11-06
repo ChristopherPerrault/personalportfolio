@@ -20,7 +20,13 @@
   "techStack": {
     "title": "Tech Stack",
     "show": "Show Tech Stack",
-    "hide": "Hide Tech Stack"
+    "hide": "Hide Tech Stack",
+    "categories": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "database": "Database",
+      "tools": "Tools"
+    }
   },
   "resume": {
     "title": "Resume",

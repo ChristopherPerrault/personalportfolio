@@ -110,7 +110,7 @@ export default function TechShowcase() {
             {Object.entries(techCategories).map(([category, techs]) => (
               <div key={category} className="flex items-center justify-center">
                 <h3 className="mr-6 text-xl font-semibold text-gray-700 capitalize">
-                  {category}
+                  {t(`techStack.categories.${category}`)}
                 </h3>
 
                 <div className="flex flex-wrap justify-center gap-4">
