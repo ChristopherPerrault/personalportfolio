@@ -83,7 +83,10 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen p-4 bg-ivory">
+    <section
+      id="contact"
+      className="flex items-center justify-center min-h-screen p-4 bg-ivory"
+    >
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-lg space-y-8 bg-transparent"
@@ -175,6 +178,6 @@ export default function ContactForm() {
           )}
         </div>
       </form>
-    </div>
+    </section>
   );
 }

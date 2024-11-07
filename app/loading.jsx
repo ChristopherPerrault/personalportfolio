@@ -1,4 +1,6 @@
 "use client";
+// additional settings for the behavior of this loading screen are found at:
+// app/_components/i18nInitializer.js
 
 export default function Loading({ fadeOut }) {
   return (
