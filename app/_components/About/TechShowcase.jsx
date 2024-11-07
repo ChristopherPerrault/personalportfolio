@@ -34,10 +34,10 @@ import {
   SiVisualstudio,
   SiVisualstudiocode,
   SiIntellijidea,
-  SiNpm,
   SiMicrosoftazure,
+  SiXaml,
 } from "react-icons/si";
-import { AiFillOpenAI, AiOutlineDown } from "react-icons/ai";
+import { AiOutlineDown } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 
 const techCategories = {
@@ -53,15 +53,15 @@ const techCategories = {
     { name: "DaisyUI", icon: SiDaisyui },
   ],
   backend: [
+    { name: "C#", icon: SiCsharp },
+    { name: "ASP.NET", icon: SiDotnet },
+    { name: "Java", icon: FaJava },
+    { name: "Spring Boot", icon: SiSpring },
     { name: "Node.js", icon: FaNodeJs },
     { name: "Express", icon: SiExpress },
     { name: "Laravel", icon: SiLaravel },
     { name: "PHP", icon: SiPhp },
     { name: "Inertia", icon: TbBrandInertia },
-    { name: "C#", icon: SiCsharp },
-    { name: "ASP.NET", icon: SiDotnet },
-    { name: "Java", icon: FaJava },
-    { name: "Spring Boot", icon: SiSpring },
   ],
   database: [
     { name: "MySQL", icon: SiMysql },
@@ -75,8 +75,7 @@ const techCategories = {
     { name: "Azure", icon: SiMicrosoftazure },
     { name: "GitHub", icon: FaGithub },
     { name: "Unity", icon: TbBrandUnity },
-    { name: "npm", icon: SiNpm },
-    { name: "ChatGPT", icon: AiFillOpenAI },
+    { name: "WPF", icon: SiXaml },
     { name: "VS Code", icon: SiVisualstudiocode },
     { name: "Visual Studio", icon: SiVisualstudio },
     { name: "IntelliJ IDEA", icon: SiIntellijidea },
