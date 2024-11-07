@@ -88,6 +88,9 @@ export default function ContactForm() {
         onSubmit={handleSubmit}
         className="w-full max-w-lg space-y-8 bg-transparent"
       >
+        <h2 className="flex justify-center text-4xl font-bold">
+          {t("contact.title")}
+        </h2>
         {Object.keys(fieldErrors).some(
           (field) => touchedFields[field] && fieldErrors[field]
         ) && (
@@ -99,7 +102,6 @@ export default function ContactForm() {
               ))}
           </div>
         )}
-
         {["name", "email", "message"].map((field) => (
           <div key={field} className="relative flex items-center pb-1">
             <input
@@ -121,7 +123,6 @@ export default function ContactForm() {
         transform ${formData[field] ? "translate-y-[-1.5rem] scale-90" : ""}`}
             >
               {t(`contact.${field}`)}{" "}
-              {/* This should display the translated label */}
             </label>
             <div className="absolute right-0">
               {touchedFields[field] &&
@@ -140,7 +141,6 @@ export default function ContactForm() {
             </div>
           </div>
         ))}
-
         <button
           type="submit"
           disabled={isButtonDisabled}
@@ -158,7 +158,6 @@ export default function ContactForm() {
             {t("contact.submit")}
           </div>
         </button>
-
         <div className="flex items-center justify-center mt-4 text-center">
           {feedbackMessage && (
             <div

@@ -6,6 +6,7 @@
     "contact": "contact"
   },
   "project": {
+    "sectionHeader": "Projects",
     "description1": "Commercial landing page, designed & built from scratch for the client. Modern, clear & very fast; developed with the foundations set for ease of growth. Features custom contact form validation and instant language translations.",
     "description2": "...",
     "visitSite": "Visit Site",
@@ -34,6 +35,7 @@
     "downloadBtn": "Download Resume"
   },
   "contact": {
+    "title": "Contact",
     "validation": {
       "name": "Name is required.",
       "email": "Email is required.",

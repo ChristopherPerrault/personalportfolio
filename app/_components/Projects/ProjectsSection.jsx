@@ -2,10 +2,11 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import SeeMoreButton from "./SeeMoreButton";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectsSection() {
   const [showAllProjects, setShowAllProjects] = useState(false);
-
+  const { t } = useTranslation();
   const projects = [
     {
       title: "Dr.Charge",
@@ -59,7 +60,9 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="py-16 bg-ivory">
       <div className="container px-4 mx-auto">
-        <h2 className="mb-8 text-4xl font-bold text-center">Projects</h2>
+        <h2 className="mb-8 text-4xl font-bold text-center">
+          {t("project.sectionHeader")}
+        </h2>
         <div className="grid max-w-screen-md grid-cols-1 gap-8 mx-auto sm:px-6 lg:px-10">
           {visibleProjects.map((project, index) => (
             <ProjectCard

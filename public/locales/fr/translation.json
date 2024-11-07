@@ -6,6 +6,7 @@
     "contact": "contact"
   },
   "project": {
+    "sectionHeader": "Projets",
     "description1": "Page de destination commerciale, conçue et développée de A à Z pour le client. Moderne, épurée et très rapide; développée avec des bases solides pour faciliter la croissance. Inclut une validation personnalisée du formulaire de contact et des traductions instantanées.",
     "description2": "...",
     "visitSite": "Visiter le site",
@@ -34,6 +35,7 @@
     "downloadBtn": "Télécharger le CV"
   },
   "contact": {
+    "title": "Contact",
     "validation": {
       "name": "Le nom est requis.",
       "email": "L'email est requis.",
