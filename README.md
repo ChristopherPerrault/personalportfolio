@@ -1,6 +1,7 @@
 ### Welcome!
 
-### This is my portfolio site.
+### This is my portfolio site, WHICH IS A WORK IN PROGRESS; I JUST DEPLOYED NOV 7th!
+
 
 ## Access it [right here](https://chrisperrault.vercel.app/)
 
