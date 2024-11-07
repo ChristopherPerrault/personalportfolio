@@ -15,6 +15,8 @@ export default function ProjectsSection() {
         "/images/projects/drc1.png",
         "/images/projects/drc2.png",
         "/images/projects/drc3.png",
+        "/images/projects/drc4.png",
+        "/images/projects/drc5.png",
       ],
       github: "https://github.com/ChristopherPerrault/drcsite",
       liveUrl: "https://drcharge.ca",
