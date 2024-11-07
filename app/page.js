@@ -8,7 +8,7 @@ import ContactSection from "./_components/Contact/ContactSection";
 export default function Home() {
   return (
     <>
-      <div className="container mx-auto px-4">
+      <div className="container px-4 mx-auto">
         <section id="projects" className="py-16 bg-ivory">
           <ProjectsSection />
         </section>

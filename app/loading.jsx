@@ -1,4 +1,6 @@
 "use client";
+import { IoMusicalNotesOutline } from "react-icons/io5";
+
 // additional settings for the behavior of this loading screen are found at:
 // app/_components/i18nInitializer.js
 
@@ -10,8 +12,11 @@ export default function Loading({ fadeOut }) {
       }`}
     >
       <div className="space-y-2 text-center">
+        <p className="text-xl font-bold text-yellow-600 ">
+          <IoMusicalNotesOutline />
+        </p>
         <p className="text-3xl font-bold text-yellow-600 ">keep</p>
-        {["loading,", "loading,", "loading,", "loading"].map((word, index) => (
+        {["loading,", "loading", "loading,", "loading"].map((word, index) => (
           <p
             key={index}
             className="text-3xl font-bold text-yellow-600 transition-opacity duration-300"

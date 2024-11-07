@@ -10,25 +10,29 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
+    let timeout;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      const sections = ["projects", "about", "resume", "contact"];
-      const scrollPosition = window.scrollY;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        setIsScrolled(window.scrollY > 50);
+        const sections = ["projects", "about", "resume", "contact"];
+        const scrollPosition = window.scrollY;
 
-      sections.forEach((sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-          const offsetTop = section.offsetTop;
-          const offsetHeight = section.offsetHeight;
+        sections.forEach((sectionId) => {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            const offsetTop = section.offsetTop;
+            const offsetHeight = section.offsetHeight;
 
-          if (
-            scrollPosition >= offsetTop - 50 &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(sectionId);
+            if (
+              scrollPosition >= offsetTop - 220 &&
+              scrollPosition < offsetTop + offsetHeight + 220
+            ) {
+              setActiveSection(sectionId);
+            }
           }
-        }
-      });
+        });
+      }, 10);
     };
 
     window.addEventListener("scroll", handleScroll);

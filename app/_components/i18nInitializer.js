@@ -1,7 +1,5 @@
 "use client";
 
-//** */ -------------  notes below  -------------------------------------------------
-
 import { useEffect, useState } from "react";
 import i18n from "../i18n";
 import Loading from "../loading";
@@ -21,8 +19,7 @@ export default function I18nInitializer({ children }) {
         setTimeout(() => {
           setLoading(false); // After fade-out, hide loading
         }, 200); // Duration of the fade-out effect
-      }, 3000); // loading time
-      //! duration should be set to 200, 3000 for loading time
+      }, 2500); // loading time
     };
 
     // Check if i18n is already initialized
