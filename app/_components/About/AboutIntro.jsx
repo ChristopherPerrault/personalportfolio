@@ -8,7 +8,7 @@ export default function AboutIntro() {
 
   return (
     <section id="about" className="py-16 bg-ivory">
-      <div className="container px-4 mx-auto text-center">
+      <div className="text-center ">
         <h2 className="mb-8 text-4xl font-bold">About Me</h2>
         <div className="flex flex-col items-center justify-center md:flex-row md:space-x-8">
           <div className="relative w-56 h-56 mb-4 overflow-hidden border-4 border-yellow-500 rounded-lg shadow-lg md:w-64 md:h-64 md:mb-0">

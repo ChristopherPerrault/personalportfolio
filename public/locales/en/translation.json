@@ -40,6 +40,7 @@
       "name": "Name is required.",
       "email": "Email is required.",
       "message": "Message is required.",
+      "invalidName": "Invalid name.",
       "invalidEmail": "Invalid email address format.",
       "messageTooShort": "Message is too short.",
       "messageTooLong": "Message is too long."

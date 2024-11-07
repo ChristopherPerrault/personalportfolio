@@ -1,5 +1,5 @@
 // formValidation.js
-export const MAX_MESSAGE_LENGTH = 500;
+export const MAX_MESSAGE_LENGTH = 1000;
 
 export const validateName = (name, t) => {
   if (!name) return t("contact.validation.name");
@@ -15,9 +15,10 @@ export const validateEmail = (email, t) => {
   return "";
 };
 
-export const validateMessage = (message, t, maxLength) => {
+export const validateMessage = (message, t) => {
   if (!message) return t("contact.validation.message");
   if (message.length < 10) return t("contact.validation.messageTooShort");
-  if (message.length > maxLength) return t("contact.validation.messageTooLong");
+  if (message.length > MAX_MESSAGE_LENGTH)
+    return t("contact.validation.messageTooLong");
   return "";
 };

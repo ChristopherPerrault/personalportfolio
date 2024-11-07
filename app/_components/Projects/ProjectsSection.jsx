@@ -58,29 +58,27 @@ export default function ProjectsSection() {
   const visibleProjects = showAllProjects ? projects : projects.slice(0, 3);
 
   return (
-    <section id="projects" className="py-16 bg-ivory">
-      <div className="container px-4 mx-auto">
-        <h2 className="mb-8 text-4xl font-bold text-center">
-          {t("project.sectionHeader")}
-        </h2>
-        <div className="grid max-w-screen-md grid-cols-1 gap-8 mx-auto sm:px-6 lg:px-10">
-          {visibleProjects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              images={project.images}
-              descriptionKey={project.descriptionKey}
-              techsUsed={project.techsUsed}
-              liveUrl={project.liveUrl}
-              github={project.github}
-            />
-          ))}
-        </div>
-
-        {!showAllProjects && projects.length > 3 && (
-          <SeeMoreButton onClick={() => setShowAllProjects(true)} />
-        )}
+    <section id="projects" className=" bg-ivory">
+      <h2 className="mb-8 text-4xl font-bold text-center">
+        {t("project.sectionHeader")}
+      </h2>
+      <div className="grid max-w-screen-md grid-cols-1 gap-8 mx-auto sm:px-6 lg:px-10">
+        {visibleProjects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            images={project.images}
+            descriptionKey={project.descriptionKey}
+            techsUsed={project.techsUsed}
+            liveUrl={project.liveUrl}
+            github={project.github}
+          />
+        ))}
       </div>
+
+      {!showAllProjects && projects.length > 3 && (
+        <SeeMoreButton onClick={() => setShowAllProjects(true)} />
+      )}
     </section>
   );
 }

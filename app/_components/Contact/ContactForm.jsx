@@ -31,7 +31,7 @@ export default function ContactForm() {
       ? validateEmail(formData.email, t)
       : t("contact.validation.email"),
     message: formData.message
-      ? validateMessage(formData.message, t, MAX_MESSAGE_LENGTH)
+      ? validateMessage(formData.message, t)
       : t("contact.validation.message"),
   };
 
@@ -83,21 +83,15 @@ export default function ContactForm() {
   };
 
   return (
-    <section
-      id="contact"
-      className="flex items-center justify-center min-h-screen p-4 bg-ivory"
-    >
-      <form
-        onSubmit={handleSubmit}
-        className="w-full max-w-lg space-y-8 bg-transparent"
-      >
+    <section id="contact" className="flex items-center justify-center p-4">
+      <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-8 ">
         <h2 className="flex justify-center text-4xl font-bold">
           {t("contact.title")}
         </h2>
         {Object.keys(fieldErrors).some(
           (field) => touchedFields[field] && fieldErrors[field]
         ) && (
-          <div className="mb-4 text-center text-red-600">
+          <div className="mb-4 text-center text-red-400 ">
             {Object.entries(fieldErrors)
               .filter(([field, error]) => touchedFields[field] && error)
               .map(([field, error], index) => (
