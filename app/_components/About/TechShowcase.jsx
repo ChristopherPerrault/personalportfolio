@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import {
   TbBrandReactNative,
@@ -94,7 +95,7 @@ export default function TechShowcase() {
       <div className="container px-4 mx-auto text-center">
         <h2 className="text-4xl font-bold">{t("techStack.title")}</h2>
         <div className="flex justify-center mt-4">
-          <div className="flex rounded-md p-0.5 bg-black">
+          <div className="p-3 bg-yellow-500 border-2 border-black rounded-md">
             <button onClick={() => setIsOpen(!isOpen)} className={buttonStyles}>
               {isOpen ? t("techStack.hide") : t("techStack.show")}
               <AiOutlineDown
