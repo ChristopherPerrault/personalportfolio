@@ -34,6 +34,17 @@
       "tools": "Tools"
     }
   },
+  "hobbies": {
+    "intro": "My hobbies and interests are...",
+    "workingOut": "working out",
+    "growingPeppers": "growing hot peppers",
+    "cooking": "cooking",
+    "videoGames": "playing video games",
+    "vocalsInBand": "being a punk rocker",
+    "donatingBlood": "donating blood",
+    "locksport": "picking locks",
+    "liveMusicComedy": "going out to shows"
+  },
   "resume": {
     "title": "Resume",
     "viewBtn": "View Resume",

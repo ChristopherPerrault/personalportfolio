@@ -1,4 +1,5 @@
 import AboutIntro from "./AboutIntro";
+import HobbiesAndInterests from "./HobbiesAndInterests";
 import TechShowcase from "./TechShowcase";
 
 export default function AboutSection() {
@@ -6,6 +7,7 @@ export default function AboutSection() {
     <>
       <AboutIntro />
       <TechShowcase />
+      <HobbiesAndInterests />
     </>
   );
 }

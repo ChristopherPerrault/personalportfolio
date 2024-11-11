@@ -16,7 +16,7 @@ export default function Loading({ fadeOut }) {
           <IoMusicalNotesOutline />
         </p>
         <p className="text-3xl font-bold text-yellow-600 ">keep</p>
-        {["loading,", "loading", "loading,", "loading"].map((word, index) => (
+        {["loading,", "loading,", "loading,", "loading"].map((word, index) => (
           <p
             key={index}
             className="text-3xl font-bold text-yellow-600 transition-opacity duration-300"
