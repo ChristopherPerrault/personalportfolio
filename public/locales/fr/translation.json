@@ -5,6 +5,11 @@
     "resume": "cv",
     "contact": "contact"
   },
+  "hero": {
+    "greeting": "Bonjour, je m'appelle ",
+    "description": "Je suis un développeur full stack.",
+    "ctaBtn": "Voir Mon Portfolio"
+  },
   "project": {
     "sectionHeader": "Projets",
     "description1": "Page de destination commerciale, conçue et développée de A à Z pour le client. Moderne, épurée et très rapide; développée avec des bases solides pour faciliter la croissance. Inclut une validation personnalisée du formulaire de contact et des traductions instantanées.",

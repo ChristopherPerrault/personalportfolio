@@ -5,6 +5,11 @@
     "resume": "resume",
     "contact": "contact"
   },
+  "hero": {
+    "greeting": "Hello, my name's ",
+    "description": "I'm a full stack developer.",
+    "ctaBtn": "View My Portfolio"
+  },
   "project": {
     "sectionHeader": "Projects",
     "description1": "Commercial landing page, designed & built from scratch for the client. Modern, clear & very fast; developed with the foundations set for ease of growth. Features custom contact form validation and instant language translations.",
