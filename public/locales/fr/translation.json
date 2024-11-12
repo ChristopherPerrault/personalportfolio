@@ -19,8 +19,9 @@
     "seeMoreBtn": "Voir Plus de Projets"
   },
   "about": {
-    "description": "Je m'appelle Chris Perrault, développeur full stack basé à Montréal avec un parcours unique dans le domaine de la technologie. J'ai passé plus de 15 ans comme cuisinier professionnel avant de découvrir ma passion pour la programmation, ce qui m'a amené à obtenir mon diplôme avec distinction du programme de développement full stack du CEGEP John Abbott. Aujourd'hui, je m'épanouis dans le travail en freelance et reste actif au sein des communautés de programmation, autant en ligne que lors d'événements locaux. J'aime créer, apprendre et partager mes compétences avec les autres.",
-    "photoAlt": "Portrait of Chris"
+    "sectionTitle": "À propos de moi",
+    "description": "Je m'appelle Chris Perrault, développeur full stack basé à Montréal, avec un parcours unique dans le domaine de la technologie. J'ai passé plus de 15 ans comme cuisinier professionnel avant de découvrir ma passion pour la programmation, ce qui m'a conduit à obtenir mon diplôme avec distinction du programme de développement full stack du CEGEP John Abbott. Aujourd'hui, je m'épanouis dans le travail en freelance et demeure actif au sein des communautés de programmation, tant en ligne que dans des événements locaux. J'aime créer, apprendre et partager mes compétences avec les autres.",
+    "photoAlt": "Portrait de Chris"
   },
   "hobbies": {
     "intro": "Mes passe-temps et intérêts sont...",

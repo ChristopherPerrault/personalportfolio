@@ -1,5 +1,5 @@
 "use client";
-import { BiArrowToTop } from "react-icons/bi";
+import { LuArrowUpSquare } from "react-icons/lu";
 
 export default function BackToTopButton() {
   function scrollToTop() {
@@ -7,15 +7,13 @@ export default function BackToTopButton() {
   }
 
   return (
-    <div className="flex flex-row justify-end mr-8 select-none -mb-9">
-      <div className="tooltip-container">
-        <button onClick={scrollToTop}>
-          <BiArrowToTop
-            size={50}
-            className="text-yellow-500 hover:text-yellow-600"
-          />
-        </button>
-      </div>
+    <div className="flex flex-row justify-center mr-8 select-none -mb-9">
+      <button onClick={scrollToTop}>
+        <LuArrowUpSquare
+          size={50}
+          className="text-black hover:text-yellow-500"
+        />
+      </button>
     </div>
   );
 }

@@ -5,7 +5,6 @@ export default function Footer() {
 
   return (
     <>
-      <BackToTopButton />
       <footer className="flex justify-center align-bottom select-none">
         <div className="relative">
           <h1 className="flex flex-row text-2xl tracking-tight text-black">
@@ -15,6 +14,7 @@ export default function Footer() {
           </h1>
         </div>
       </footer>
+      <BackToTopButton />
     </>
   );
 }

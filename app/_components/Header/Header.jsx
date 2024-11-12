@@ -2,12 +2,15 @@
 
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { FaBars, FaTimes } from "react-icons/fa"; // Import icons
+
 import LangToggle from "./LangToggle";
 
 export default function Header() {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [isOpen, setIsOpen] = useState(false); // For burger menu toggle
 
   useEffect(() => {
     let timeout;
@@ -55,7 +58,19 @@ export default function Header() {
       <div className="container flex items-center justify-between px-4 mx-auto sm:px-6 lg:px-8">
         <LangToggle isScrolled={isScrolled} />
 
-        <nav className="flex space-x-8 text-xl font-bold">
+        {/* Burger menu for small screens */}
+        <div className="flex items-center lg:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-3xl text-black hover:text-yellow-500 focus:outline-none"
+            aria-label="Toggle navigation"
+          >
+            {isOpen ? <FaTimes /> : <FaBars />} {/* Burger/close icon */}
+          </button>
+        </div>
+
+        {/* Desktop navigation links */}
+        <nav className="hidden space-x-8 text-xl font-bold lg:flex">
           {["projects", "about", "resume", "contact"].map((sectionId) => (
             <button
               key={sectionId}
@@ -80,6 +95,43 @@ export default function Header() {
             </button>
           ))}
         </nav>
+      </div>
+
+      {/* Mobile navigation menu (hidden on large screens) */}
+      <div
+        className={`lg:hidden ${isOpen ? "block" : "hidden"} bg-ivory w-full`}
+      >
+        <div className="flex flex-col items-center py-4 space-y-6">
+          {["projects", "about", "resume", "contact"].map((sectionId) => (
+            <button
+              key={sectionId}
+              onClick={() => {
+                scrollToSection(sectionId);
+                setIsOpen(false); // Close menu on item click
+              }}
+              className={`relative transition-colors ${
+                activeSection === sectionId ? "font-bold text-yellow-600" : ""
+              } text-xl`}
+            >
+              {t(`nav.${sectionId}`)}{" "}
+              <span
+                className={`absolute left-0 right-0 bottom-0 h-1 transition-all ${
+                  activeSection === sectionId ? "bg-yellow-600" : "bg-black"
+                }`}
+              ></span>
+            </button>
+          ))}
+        </div>
+        {/* Close button below nav links for small screens */}
+        <div className="flex justify-center mt-4">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-2xl text-black hover:text-yellow-500"
+            aria-label="Close navigation"
+          >
+            <FaTimes />
+          </button>
+        </div>
       </div>
     </header>
   );
