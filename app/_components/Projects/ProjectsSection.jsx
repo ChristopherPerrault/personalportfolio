@@ -9,7 +9,7 @@ export default function ProjectsSection() {
   const { t } = useTranslation();
   const projects = [
     {
-      title: "Dr.Charge",
+      title: "Dr .Charge",
       descriptionKey: "project.description1",
       images: [
         "/images/projects/drc1.png",
