@@ -12,8 +12,10 @@
   },
   "project": {
     "sectionHeader": "Projets",
+    "title1": "Dr. Charge",
     "description1": "Page de destination commerciale, conçue et développée de A à Z pour le client. Moderne, épurée et très rapide; développée avec des bases solides pour faciliter la croissance. Inclut une validation personnalisée du formulaire de contact et des traductions instantanées.",
-    "description2": "...",
+    "title2": "TicketBlaster",
+    "description2": "Un clone de 'Ticketmaster', utilisant des API pour afficher des événements locaux auxquels les utilisateurs peuvent acheter des billets (via Stripe) et qu'ils peuvent suivre. Comprend un système d'enregistrement/connexion robuste et sécurisé, ainsi qu'un design CSS conçu de zéro. Réalisé par une petite équipe, du concept au déploiement, en seulement 3 semaines.",
     "visitSite": "Visiter le site",
     "github": "Github",
     "seeMoreBtn": "Voir Plus de Projets"

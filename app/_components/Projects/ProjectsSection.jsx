@@ -7,9 +7,10 @@ import { useTranslation } from "react-i18next";
 export default function ProjectsSection() {
   const [showAllProjects, setShowAllProjects] = useState(false);
   const { t } = useTranslation();
+
   const projects = [
     {
-      title: "Dr .Charge",
+      title: t("project.title1"),
       descriptionKey: "project.description1",
       images: [
         "/images/projects/drc1.png",
@@ -22,45 +23,32 @@ export default function ProjectsSection() {
       liveUrl: "https://drcharge.ca",
       techsUsed: ["Next.js", "Tailwind CSS", "Nodemailer"],
     },
-    // {
-    //   title: "Project 2",
-    //   descriptionKey: "project.description2",
-    //   images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
-    //   github: "https://github.com/project2",
-    //   liveUrl: "https://project2.com",
-    //   techsUsed: ["React", "CSS Modules", "Node.js"],
-    // },
-    // {
-    //   title: "Project 2",
-    //   descriptionKey: "project.description2",
-    //   images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
-    //   github: "https://github.com/project2",
-    //   liveUrl: "https://project2.com",
-    //   techsUsed: ["React", "CSS Modules", "Node.js"],
-    // },
-    // {
-    //   title: "Project 2",
-    //   descriptionKey: "project.description2",
-    //   images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
-    //   github: "https://github.com/project2",
-    //   liveUrl: "https://project2.com",
-    //   techsUsed: ["React", "CSS Modules", "Node.js"],
-    // },
-    // {
-    //   title: "Project 2",
-    //   descriptionKey: "project.description2",
-    //   images: ["/images/projects/drc1.png", "/images/projects/drc2.png"],
-    //   github: "https://github.com/project2",
-    //   liveUrl: "https://project2.com",
-    //   techsUsed: ["React", "CSS Modules", "Node.js"],
-    // },
-    // Add more projects here...
+    {
+      title: t("project.title2"),
+      descriptionKey: "project.description2",
+      images: [
+        "/images/projects/tb1.png",
+        "/images/projects/tb2.png",
+        "/images/projects/tb3.png",
+        "/images/projects/tb4.png",
+      ],
+      github: "https://github.com/ChristopherPerrault/ticketblaster",
+      liveUrl: "https://clever-hotteok-f60642.netlify.app/",
+      techsUsed: [
+        "MERN Stack",
+        "Mongodb",
+        "Express",
+        "React",
+        "Node.js",
+        "MaterialUI",
+      ],
+    },
   ];
 
   const visibleProjects = showAllProjects ? projects : projects.slice(0, 3);
 
   return (
-    <section id="projects" className=" bg-ivory">
+    <section id="projects" className="bg-ivory">
       <h2 className="mb-8 text-4xl font-bold text-center">
         {t("project.sectionHeader")}
       </h2>
@@ -79,7 +67,10 @@ export default function ProjectsSection() {
       </div>
 
       {!showAllProjects && projects.length > 3 && (
-        <SeeMoreButton onClick={() => setShowAllProjects(true)} />
+        <SeeMoreButton
+          onClick={() => setShowAllProjects(true)}
+          label={t("project.seeMoreBtn")} // Translated "See More Projects" button
+        />
       )}
     </section>
   );

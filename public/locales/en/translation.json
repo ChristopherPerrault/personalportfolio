@@ -12,14 +12,16 @@
   },
   "project": {
     "sectionHeader": "Projects",
+    "title1": "Dr. Charge",
     "description1": "Commercial landing page, designed & built from scratch for the client. Modern, clear & very fast; developed with the foundations set for ease of growth. Features custom contact form validation and instant language translations.",
-    "description2": "...",
+    "title2": "TicketBlaster",
+    "description2": "A clone of 'Ticketmaster', using APIs to populate local events users can purchase tickets to (via Stripe) and keep track of. Features a robust, secure registration/login system and CSS from scratch. Built by a small team from the ground up to deployment in only 3 weeks.",
     "visitSite": "Visit Site",
     "github": "Github",
     "seeMoreBtn": "See More Projects"
   },
   "about": {
-    "sectionTitle":"About Me",
+    "sectionTitle": "About Me",
     "description": "I'm Chris Perrault, a full stack developer from Montréal with a unique path to tech. I spent over 15 years as a professional cook before discovering my love for programming, which led me to graduate with honors from John Abbott College's Full Stack program. Today, I thrive in freelance work and stay active in programming communities, both online and at local events. I'm all about building, learning, and sharing my skills with others.",
     "toolsHeader": "Familiar tools",
     "photoAlt": "Portrait of Chris"
