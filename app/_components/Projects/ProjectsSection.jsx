@@ -19,7 +19,7 @@ export default function ProjectsSection() {
         "/images/projects/drc4.png",
         "/images/projects/drc5.png",
       ],
-      github: "https://github.com/ChristopherPerrault/drcsite",
+      // github: "https://github.com/ChristopherPerrault/drcsite",
       liveUrl: "https://drcharge.ca",
       techsUsed: ["Next.js", "Tailwind CSS", "Nodemailer"],
     },
@@ -69,7 +69,7 @@ export default function ProjectsSection() {
       {!showAllProjects && projects.length > 3 && (
         <SeeMoreButton
           onClick={() => setShowAllProjects(true)}
-          label={t("project.seeMoreBtn")} // Translated "See More Projects" button
+          label={t("project.seeMoreBtn")}
         />
       )}
     </section>
