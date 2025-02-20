@@ -70,6 +70,7 @@ export default function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+      console.log(response); // Log the full response for debugging
       if (response.ok) {
         setFeedbackMessage(t("contact.success"));
         setFormData({ name: "", email: "", message: "" });
