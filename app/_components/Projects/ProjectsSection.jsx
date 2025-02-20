@@ -57,6 +57,17 @@ export default function ProjectsSection() {
       // liveUrl: "https://clever-hotteok-f60642.netlify.app/",
       techsUsed: ["C#", "WPF", "Entity Framework", "XAML"],
     },
+    {
+      title: t("project.title4"),
+      descriptionKey: "project.description4",
+      images: [
+        "/images/projects/portfolio1.png",
+        "/images/projects/portfolio2.png",
+      ],
+      github: "https://github.com/ChristopherPerrault/personalportfolio",
+
+      techsUsed: ["Next.js", "Tailwind CSS"],
+    },
   ];
 
   const visibleProjects = showAllProjects ? projects : projects.slice(0, 3);
