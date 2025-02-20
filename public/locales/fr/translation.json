@@ -16,6 +16,8 @@
     "description1": "Page de destination commerciale, conçue et développée de A à Z pour le client. Moderne, épurée et très rapide; développée avec des bases solides pour faciliter la croissance. Inclut une validation personnalisée du formulaire de contact et des traductions instantanées.",
     "title2": "TicketBlaster",
     "description2": "Un clone de 'Ticketmaster', utilisant des API pour afficher des événements locaux auxquels les utilisateurs peuvent acheter des billets (via Stripe) et qu'ils peuvent suivre. Comprend un système d'enregistrement/connexion robuste et sécurisé, ainsi qu'un design CSS conçu de zéro. Réalisé par une petite équipe, du concept au déploiement, en seulement 3 semaines.",
+    "title3": "Regex Academy",
+    "description3": "Un logiciel de gestion scolaire, où les utilisateurs peuvent inscrire des élèves et des enseignants dans des classes personnalisées créées dans une base de données. Offre un CRUD complet. Développé en équipe.",
     "visitSite": "Visiter le site",
     "github": "Github",
     "seeMoreBtn": "Voir Plus de Projets"
