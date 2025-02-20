@@ -43,6 +43,20 @@ export default function ProjectsSection() {
         "MaterialUI",
       ],
     },
+    {
+      title: t("project.title3"),
+      descriptionKey: "project.description3",
+      images: [
+        "/images/projects/ra1.png",
+        "/images/projects/ra2.png",
+        "/images/projects/ra3.png",
+        "/images/projects/ra4.png",
+        "/images/projects/ra5.png",
+      ],
+      github: "https://github.com/kevindarbydev/RegexAcademy",
+      // liveUrl: "https://clever-hotteok-f60642.netlify.app/",
+      techsUsed: ["C#", "WPF", "Entity Framework", "XAML"],
+    },
   ];
 
   const visibleProjects = showAllProjects ? projects : projects.slice(0, 3);

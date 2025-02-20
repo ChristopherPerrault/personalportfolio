@@ -16,6 +16,8 @@
     "description1": "Commercial landing page, designed & built from scratch for the client. Modern, clear & very fast; developed with the foundations set for ease of growth. Features custom contact form validation and instant language translations.",
     "title2": "TicketBlaster",
     "description2": "A clone of 'Ticketmaster', using APIs to populate local events users can purchase tickets to (via Stripe) and keep track of. Features a robust, secure registration/login system and CSS from scratch. Built by a small team from the ground up to deployment in only 3 weeks.",
+    "title3": "Regex Academy",
+    "description3": "A school management software, where users can enroll students & teachers into custom created classes in a database. Features full CRUD. Team-built.",
     "visitSite": "Visit Site",
     "github": "Github",
     "seeMoreBtn": "See More Projects"
